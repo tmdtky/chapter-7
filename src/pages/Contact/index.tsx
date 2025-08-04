@@ -1,3 +1,4 @@
+// /src/pages/Contact/index.tsx
 import React, { useState } from 'react';
 import { Label } from './Label';
 import { FormGroup } from './FormGroup';
@@ -7,7 +8,7 @@ import { ErrorMessage } from './ErrorMessage';
 import { API_BASE_URL } from '../../constants';
 import { ContactFormData } from '../../types';
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');

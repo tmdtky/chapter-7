@@ -5,7 +5,7 @@ import { Detail } from './pages/Detail';
 import { Contact } from './pages/Contact';
 import { Header } from './components/Header';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <Header />

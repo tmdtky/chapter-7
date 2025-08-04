@@ -1,8 +1,7 @@
-// /src/components/Header.tsx
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <header className="bg-gray-800 text-white px-6 py-6 font-bold flex justify-between items-center">
       <Link to="/" className="text-white no-underline hover:text-gray-300">

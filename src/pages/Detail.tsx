@@ -1,10 +1,9 @@
-// /src/pages/Detail.tsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_BASE_URL } from '../constants';
 import { Post, PostResponse, ParamsType } from '../types';
 
-export const Detail = () => {
+export const Detail: React.FC = () => {
   // react-routerのuseParamsを使って、URLのパラメータ（記事ID）を取得
   const { id } = useParams<ParamsType>();
   const [post, setPost] = useState<Post | null>(null);

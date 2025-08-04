@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextareaProps } from '../../types';
 
-export const Textarea = ({ id, value, onChange, disabled }: TextareaProps) => {
+export const Textarea: React.FC<TextareaProps> = ({ id, value, onChange, disabled }) => {
   return (
     <textarea
       id={id}
