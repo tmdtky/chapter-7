@@ -1,0 +1,13 @@
+import React from 'react';
+import { LabelProps } from '../../types';
+
+export const Label: React.FC<LabelProps> = ({ text, className = '', ...props }) => {
+  return (
+    <label
+      {...props}
+      className={`w-60 text-left ${className}`}
+    >
+      {text}
+    </label>
+  );
+};
