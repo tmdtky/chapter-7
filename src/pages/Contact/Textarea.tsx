@@ -1,17 +1,15 @@
 import React from 'react';
 import { TextareaProps } from '../../types';
 
-export const Textarea: React.FC<TextareaProps> = ({ id, value, onChange, disabled }) => {
+export const Textarea: React.FC<TextareaProps> = ({ onChange, className = '', rows = 8, ...props }) => {
   return (
     <textarea
-      id={id}
-      value={value}
+      {...props}
+      rows={rows}
       onChange={(e) => onChange(e.target.value)}
-      disabled={disabled}
-      rows={8}
       className={`w-full border border-gray-300 rounded-lg p-4 ${
-        disabled ? 'bg-gray-100 cursor-not-allowed opacity-60' : 'bg-white'
-      }`}
+        props.disabled ? 'bg-gray-100 cursor-not-allowed opacity-60' : 'bg-white'
+      } ${className}`}
     />
   );
 };
